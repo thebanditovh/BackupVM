@@ -17,7 +17,7 @@ Par exemple, pour que le script s'exécute à 2 h 00 du matin tous les jours, no
 $ crontab -e
 ```
 
-_\* Et ajoutez la ligne suivante à cron :_
+Et ajoutez la ligne suivante à cron :
 ```bash
 0 2 * * * /bin/bash /etc/bvm.bash
 ```
