@@ -27,6 +27,8 @@ apt -y update
 apt -y install rsync
 apt -y install sshpass
 
+sshpass -p "${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p ${DEST_PORT} "mkdir -p ${DEST_DIR}/$(hostname -f)"
+
 if [ -d "/var/lib/pterodactyl" ]; then
   rsync -avP -e 'sshpass -p "${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p ${DEST_PORT}' /var/lib/pterodactyl/ ${DEST_USER}@${DEST_HOST}:${DEST_DIR}/$(hostname -f)/pterodactyl
 fi
