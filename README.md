@@ -21,6 +21,9 @@ _\* Et ajoutez la ligne suivante à cron :_
 0 2 * * * /bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
 ```
 
+```bash
+service cron restart
+```
 Commande pour executer une backup
 ```bash
 /bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
