@@ -27,30 +27,30 @@ apt -y update
 apt -y install rsync
 apt -y install sshpass
 
-sshpass -p "\${DEST_PASS}" ssh \${DEST_USER}@\${DEST_HOST} -o StrictHostKeyChecking=no -p \${DEST_PORT} "mkdir -p \${DEST_DIR}/\$(hostname -f)"
+sshpass -p "\$DEST_PASS" ssh \$DEST_USER}@\$DEST_HOST -o StrictHostKeyChecking=no -p \$DEST_PORT "mkdir -p \$DEST_DIR/\$(hostname -f)"
 
 if [ -d "/var/lib/pterodactyl" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /var/lib/pterodactyl/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/pterodactyl
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /var/lib/pterodactyl/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/pterodactyl
 fi
 
 if [ -d "/var/www" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /var/www/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/www
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /var/www/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/www
 fi
 
 if [ -d "/var/log" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /var/log/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/log
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /var/log/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/log
 fi
 
 if [ -d "/etc/apache2" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /etc/apache2/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/apache2
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /etc/apache2/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/apache2
 fi
 
 if [ -d "/etc/nginx" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /etc/apache2/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/nginx
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /etc/apache2/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/nginx
 fi
 
 if [ -d "/etc/php" ]; then
-  rsync -avP -e 'sshpass -p "\${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p \${DEST_PORT}' /etc/apache2/ \${DEST_USER}@\${DEST_HOST}:\${DEST_DIR}/\$(hostname -f)/php
+  rsync -avP -e 'sshpass -p "\$DEST_PASS" ssh -o StrictHostKeyChecking=no -p \$DEST_PORT' /etc/apache2/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/php
 fi
 # =========================================================================
 EOF
