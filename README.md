@@ -1,1 +1,1 @@
-sh BVM.sh "<host>" "<user>" "<pass>" "<dir>"
+sh BVM.sh "host" "user" "pass" "dir"
