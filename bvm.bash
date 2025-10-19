@@ -57,5 +57,17 @@ fi
 # =========================================================================
 
 EOF
+
 chmod 777 ${INSTALL_DIR}/bvm.bash
+
+echo -e "# ========================================================================="
+echo -e "# Configuration Cron"
+echo -e "# ========================================================================="
+echo -e ""
+echo -e "Par exemple, pour que le script s'exécute à 2 h 00 du matin tous les jours, nous ouvririons cron avec la commande suivante :"
+echo -e "Et ajoutez la ligne suivante à cron :"
+echo -e ""
+echo -e "0 2 * * * /bin/bash /etc/"
+echo -e ""
+
 
