@@ -11,6 +11,11 @@
 
 ## Utilisez cron pour planifier des sauvegardes
 
+Commande pour installer
+```bash
+/bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
+```
+
 Par exemple, pour que le script s'exécute à 2 h 00 du matin tous les jours, nous ouvririons cron avec la commande suivante :
 
 ```bash
@@ -25,7 +30,4 @@ Redémarrer le service cron
 ```bash
 service cron restart
 ```
-Commande pour installer
-```bash
-/bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
-```
+
