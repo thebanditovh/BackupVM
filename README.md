@@ -1,4 +1,4 @@
-# :bird: BACKUPVM
+# :bird: BackupVM
 
 ## Utilisez cron pour planifier des sauvegardes
 
