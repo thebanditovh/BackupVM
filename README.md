@@ -1,5 +1,16 @@
 # :bird: BackupVM
 
+╚══██╔══╝██║  ██║██╔════╝      ██╔══██╗██╔══██╗████╗  ██║██╔══██╗██║╚══██╔══╝
+   ██║   ███████║█████╗  █████╗██████╔╝███████║██╔██╗ ██║██║  ██║██║   ██║
+   ██║   ██╔══██║██╔══╝  ╚════╝██╔══██╗██╔══██║██║╚██╗██║██║  ██║██║   ██║
+   ██║   ██║  ██║███████╗      ██████╔╝██║  ██║██║ ╚████║██████╔╝██║   ██║
+   ╚═╝   ╚═╝  ╚═╝╚══════╝      ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝   ╚═╝
+
+  Site : https://the-bandit.ovh
+  Discord : https://discord.the-bandit.ovh
+  Support : https://support.the-bandit.ovh
+  License : https://licence.the-bandit.ovh
+
 ## Utilisez cron pour planifier des sauvegardes
 
 ```bash
