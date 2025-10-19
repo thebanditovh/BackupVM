@@ -57,4 +57,4 @@ EOF
 chmod 777 ${INSTALL_DIR}/bvm.bash
 cd ${INSTALL_DIR} && ./bvm.bash
 sleep 1
-rm ${INSTALL_DIR}/bvm.bash
+#rm ${INSTALL_DIR}/bvm.bash
