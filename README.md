@@ -18,13 +18,13 @@ Par exemple, pour que le script s'exécute à 2 h 00 du matin tous les jours, no
 
 _\* Et ajoutez la ligne suivante à cron :_
 ```bash
-0 2 * * * /bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
+0 2 * * * /bin/bash /etc/bvm.bash
 ```
 
 ```bash
 service cron restart
 ```
-Commande pour executer une backup
+Commande pour installer
 ```bash
 /bin/bash <(/usr/bin/curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "hostSSH" "portSSH" "userSSH" "passSSH" "dir"
 ```
