@@ -1,5 +1,5 @@
 #!/bin/bash
-INSTALL_DIR="/tmp"
+INSTALL_DIR="/etc"
 
 apt -y update
 apt -y install rsync
