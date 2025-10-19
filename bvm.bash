@@ -27,6 +27,6 @@ rsync -avP -e 'sshpass -p "${DEST_PASS}" ssh -o StrictHostKeyChecking=no -p 22' 
 # =========================================================================
 EOF
 chmod 777 ${INSTALL_DIR}/bvm.bash
-./${INSTALL_DIR}/bvm.bash
+cd ${INSTALL_DIR} && ./bvm.bash
 sleep 1
 rm ${INSTALL_DIR}/bvm.bash
