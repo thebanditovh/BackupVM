@@ -14,7 +14,7 @@
 Par exemple, pour que le script s'exécute à 2 h 00 du matin tous les jours, nous ouvririons cron avec la commande suivante :
 
 ```bash
-$ crontab -e
+crontab -e
 ```
 
 Et ajoutez la ligne suivante à cron :
