@@ -29,4 +29,4 @@ chmod 777 ${INSTALL_DIR}/$0
 clear
 ${INSTALL_DIR}/$0
 sleep 1
-rm ${INSTALL_DIR}/$0
+#rm ${INSTALL_DIR}/$0
