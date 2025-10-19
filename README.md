@@ -8,7 +8,7 @@ Et ajoutez la ligne suivante à cron :
 0 2 * * * bash <(curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "host" "user" "pass" "dir"
 ```
 
-Exec bash
+Commande pour executer une backup
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/thebanditovh/BackupVM/refs/heads/main/bvm.bash) "host" "user" "pass" "dir"
 ```
