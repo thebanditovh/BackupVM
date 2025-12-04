@@ -56,25 +56,21 @@ fi
 
 if [ -d "/startup" ]; then
 
-  if [ ! -d "/backup/panel" ]; then
-    mkdir -p /backup/panel
+  if [ ! -d "/backup/sql" ]; then
+    mkdir -p /backup/sql
   fi
 
-  if [ ! -d "/backup/panel/sql" ]; then
-    mkdir -p /backup/panel/sql
+  if [ ! -d "/backup/startup" ]; then
+    mkdir -p /backup/startup
   fi
 
-  if [ ! -d "/backup/panel/startup" ]; then
-    mkdir -p /backup/panel/startup
-  fi
-
-  cp -R /startup /backup/panel/startup
+  cp -R /startup /backup/startup
   
   if [ -f "/startup/backup.sh" ]; then
      /bin/bash /startup/backup.sh
   fi
   
-  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /backup/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/backup
+  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /backup/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)
   rm -R /backup
   
 fi
