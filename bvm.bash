@@ -55,7 +55,7 @@ if [ -d "/etc/php" ]; then
 fi
 
 if [ -d "/startup" ]; then
-  if [ -d "/startup" ]; then
+  if [ -f "/startup/backup.sh" ]; then
      /bin/bash /startup/backup.sh
      rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /backup/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/backup
      rm -R /backup
