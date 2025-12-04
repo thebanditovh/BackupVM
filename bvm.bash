@@ -31,7 +31,7 @@ DEST_PASS="$4"
 sshpass -p "\$DEST_PASS" ssh \$DEST_USER@\$DEST_HOST -o StrictHostKeyChecking=no -p \$DEST_PORT "mkdir -p \$DEST_DIR/\$(hostname -f)"
 
 if [ -d "/var/lib/pterodactyl" ]; then
-  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /var/lib/pterodactyl/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/pterodactyl
+  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /var/lib/pterodactyl/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/pterodactyl --exclude='/var/lib/pterodactyl/backups'
 fi
 
 if [ -d "/var/www" ]; then
