@@ -60,7 +60,7 @@ if [ -d "/startup" ]; then
      /bin/bash /startup/backup.sh
   fi
 
-  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /backup/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/startup
+  rsync -avP --delete -e 'sshpass -p "'\$DEST_PASS'" ssh -o StrictHostKeyChecking=no -p '\$DEST_PORT /startup/ \$DEST_USER@\$DEST_HOST:\$DEST_DIR/\$(hostname -f)/startup
   #rm -R /backup
 
 fi
